@@ -1,4 +1,5 @@
-FROM nethermind/nethermind@sha256:f3683e1be999870704477a3e56612e3c3af31f1a014cef427e06d9c4b965a05c
+# FROM nethermind/nethermind:1.6.7-alpine
+FROM nethermind/nethermind@sha256:363dcbb3c12f2695df5b7354f49f24e377e6efee3709756cef34aef179e92afd
 
 COPY ./keydonix-chainspec.json /nethermind/chainspec/keydonix.json
 COPY ./keydonix-config.cfg /nethermind/configs/keydonix.cfg
