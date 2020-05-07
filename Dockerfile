@@ -5,8 +5,8 @@ RUN git clone https://github.com/wolfcw/libfaketime /libfaketime
 WORKDIR /libfaketime
 RUN make && make install
 
-# FROM nethermind/nethermind:1.7.13-alpine
-FROM nethermind/nethermind@sha256:046c9a82e3789b9e91b680a4f78d8c774f3eb67eada8d4b721914f69b34834f3
+# FROM nethermind/nethermind:1.8.30-alpine
+FROM nethermind/nethermind@sha256:845d55cdfc5f4a7efa7ae6fe12326c8533af2afd2c607e4a3625d76c3a918020
 
 COPY --from=faketime /usr/local/lib/faketime/libfaketimeMT.so.1 /lib/faketime.so
 COPY ./keydonix-chainspec.json /nethermind/chainspec/keydonix.json
