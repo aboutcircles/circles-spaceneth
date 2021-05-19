@@ -1,6 +1,6 @@
 # use the base image to build with because we need to ensure that the library is built for the correct version
 FROM nethermind/nethermind@sha256:d116112a3dd06eb93df21a874b6f770d384a5a0dbda3e3fe3b56e47f671b2b17 as faketime
-RUN apk -U add git build-base
+RUN apt-get update && apt-get install --yes git build-base
 RUN git clone https://github.com/wolfcw/libfaketime /libfaketime
 WORKDIR /libfaketime
 RUN make && make install
