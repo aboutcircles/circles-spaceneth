@@ -27,7 +27,14 @@
 		"eip1344Transition": "0x0",
 		"eip1884Transition": "0x0",
 		"eip2028Transition": "0x0",
-		"eip2200Transition": "0x0"
+		"eip2200Transition": "0x0",
+		"eip2565Transition": "0x0",
+		"eip2929Transition": "0x0",
+		"eip2930Transition": "0x0",
+		"eip1559Transition": "0x0",
+		"eip3198Transition": "0x0",
+		"eip3529Transition": "0x0",
+		"eip3541Transition": "0x0"
 	},
 	"genesis": {
 		"seal": { "ethereum": { "nonce": "0x0000000000000042", "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000" } },
