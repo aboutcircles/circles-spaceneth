@@ -3,7 +3,12 @@ This repository contains a Dockerfile that allows to run a stand-alone nethermin
 It's meant for testing and CI purposes.
 
 ## Usage
-### Run in docker
+### 1. Clone the repository
+```shell
+git clone --recurse-submodules https://github.com/CirclesUBI/circles-nethermind-plugin.git
+```
+
+### 2. Run the node in docker
 Clone the repository and run the following commands:
 ```shell
 docker build . -t circles-spaceneth
@@ -16,12 +21,21 @@ The api on port 5000 is used to manipulate the time of the node.
 * JSON RPC: http://localhost:8545
 * Time Control endpoint: http://localhost:5000/set_time
 
-### Get a funded account private key
+### 3. Deploy the circles contracts
+You can deploy the Circles contracts by running:
+```shell
+./deploy.sh
+```
+This will take a while, so be patient if there's no immediate output.
+After this command has finished, you'll see the addresses of the deployed contracts and will be able to interact with it.
+
+
+### 4. Get a funded account private key
 You can get a funded account private key by running:
 ```shell
 node src/createFundedAccount.js
 ```
-Use this key to e.g. deploy contracts or to generally interact with the node.
+Use this key to interact with the contracts.
 You can run this command multiple times to get multiple funded accounts.
 
 ### Manipulate time

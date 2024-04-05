@@ -9,7 +9,7 @@ RUN apt-get update && \
 COPY ./circles-chainspec.json /nethermind/chainspec/circles.json
 COPY ./circles-config.cfg /nethermind/configs/circles.cfg
 
-# Set the initial fake time
+# Set libfaketime to 'real time'
 ENV FAKETIME="+0 x1" FAKETIME_NO_CACHE=1
 
 # Copy the Python script for the API
