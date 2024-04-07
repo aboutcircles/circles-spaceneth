@@ -1,4 +1,4 @@
-FROM nethermind/nethermind
+FROM circles-nethermind
 
 # Install required packages
 RUN apt-get update && \

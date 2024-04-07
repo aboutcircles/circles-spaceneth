@@ -1,8 +1,6 @@
 RPC_URL=http://localhost:8545
 CHAIN_ID=99
 
-git submodule update --init --recursive
-
 echo "Creating funded EOA..."
 PRIVATE_KEY=$(node src/createFundedAccount.js)
 
@@ -46,6 +44,7 @@ CHAIN_ID=$CHAIN_ID
 V1_HUB_ADDRESS=$V1_HUB_ADDRESS
 INFLATION_DAY_ZERO=$INFLATION_DAY_ZERO
 BOOTSTRAP_ONE_YEAR=$BOOTSTRAP_ONE_YEAR
+VERIFIER_URL=https://localhost:8043
 EOF
 
 cd circles-contracts-v2/script/deployments/
