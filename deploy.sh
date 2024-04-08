@@ -1,5 +1,5 @@
 RPC_URL=http://localhost:8545
-CHAIN_ID=99
+CHAIN_ID=59122
 
 echo "Creating funded EOA..."
 PRIVATE_KEY=$(node src/createFundedAccount.js)

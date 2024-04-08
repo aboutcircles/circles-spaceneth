@@ -8,3 +8,4 @@
 [submodule "circles-nethermind-plugin"]
 	path = circles-nethermind-plugin
 	url = git@github.com:CirclesUBI/circles-nethermind-plugin.git
+	branch = main
