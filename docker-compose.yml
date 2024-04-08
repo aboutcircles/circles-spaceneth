@@ -8,7 +8,7 @@ services:
       dockerfile: ./Dockerfile
     network_mode: host
     environment:
-      - V1_HUB_ADDRESS=0xa289D78ed4eeB729a709Dc97C0fA3B73eeF34ee1
+      - V1_HUB_ADDRESS=0x5FbDB2315678afecb367f032d93F642f64180aa3
       - POSTGRES_CONNECTION_STRING=Server=localhost;Port=7432;User Id=postgres;Password=;Database=postgres;
     volumes:
       - ./.container-state/circles-spaceneth/spaceneth_db:/nethermind/spaceneth_db

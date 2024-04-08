@@ -4,6 +4,8 @@ CHAIN_ID=59122
 echo "Creating funded EOA..."
 PRIVATE_KEY=$(node src/createFundedAccount.js)
 
+echo "PRIVATE_KEY=${PRIVATE_KEY}";
+
 echo "Deploying v1 contracts ..."
 
 V1_HUB_INFLATION="107"

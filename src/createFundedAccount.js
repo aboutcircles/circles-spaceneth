@@ -1,7 +1,9 @@
-const { ethers, Wallet} = require('ethers');
+const ethers = require('ethers');
+
 const provider = new ethers.JsonRpcProvider('http://localhost:8545');
 
 async function createFundedAccount() {
+
 	const accounts = await provider.listAccounts();
 	const fundedAccountsWithKnownPrivateKey = [];
 
@@ -12,7 +14,11 @@ async function createFundedAccount() {
 			continue;
 		}
 
-		const wallet = Wallet.createRandom();
+        const mnemonicPhrase = "test test test test test test test test test test test junk";
+        const nonce = await provider.getTransactionCount(account);
+        const path = `m/44'/60'/0'/0/${nonce}`;
+        const wallet = ethers.HDNodeWallet.fromMnemonic(ethers.Mnemonic.fromPhrase(mnemonicPhrase), path);
+
 		const gasLimit = await provider.estimateGas({
 			from: account.address,
 			to: wallet.address,
