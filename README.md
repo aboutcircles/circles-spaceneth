@@ -50,6 +50,7 @@ Visit the block explorer at http://localhost:4000 to see the deployed contracts.
 ### Get a funded account private key
 You can get a funded account private key by running:
 ```shell
+npm install
 node src/createFundedAccount.js
 ```
 Use this key to interact with the contracts.
